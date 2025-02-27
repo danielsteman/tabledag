@@ -1,24 +1,14 @@
-// pages/index.tsx
-import React from "react";
-import DAG, { DAGData } from "../components/DAG";
+// app/page.tsx
 
-const data: DAGData = {
-  nodes: [{ id: "A" }, { id: "B" }, { id: "C" }, { id: "D" }],
-  links: [
-    { source: "A", target: "B" },
-    { source: "A", target: "C" },
-    { source: "B", target: "D" },
-    { source: "C", target: "D" },
-  ],
-};
+import FlowChart from "@/components/FlowChart";
 
-const HomePage: React.FC = () => {
+export default function HomePage() {
   return (
-    <div>
-      <h1>DAG Visualization with D3 and Next.js (TypeScript)</h1>
-      <DAG data={data} />
-    </div>
+    <main className="w-screen h-screen p-4">
+      <h1 className="text-2xl font-bold mb-4">
+        React Flow in Next.js + Tailwind
+      </h1>
+      <FlowChart />
+    </main>
   );
-};
-
-export default HomePage;
+}
