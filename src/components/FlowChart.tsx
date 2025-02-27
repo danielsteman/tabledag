@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactFlow } from "@xyflow/react";
+import { Background, Controls, MiniMap, ReactFlow } from "@xyflow/react";
 
 import "@xyflow/react/dist/style.css";
 
@@ -9,10 +9,13 @@ const initialNodes = [
 ];
 const initialEdges = [{ id: "e1-2", source: "1", target: "2" }];
 
-export default function FlowChart() {
+export default function App() {
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
       <ReactFlow nodes={initialNodes} edges={initialEdges} />
+      <Controls />
+      <MiniMap />
+      <Background variant="dots" gap={12} size={1} />
     </div>
   );
 }

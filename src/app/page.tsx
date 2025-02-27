@@ -1,14 +1,10 @@
-// app/page.tsx
-
 import FlowChart from "@/components/FlowChart";
+import React from "react";
 
-export default function HomePage() {
+export default function Page() {
   return (
-    <main className="w-screen h-screen p-4">
-      <h1 className="text-2xl font-bold mb-4">
-        React Flow in Next.js + Tailwind
-      </h1>
+    <div className="min-h-screen bg-gray-900 p-4">
       <FlowChart />
-    </main>
+    </div>
   );
 }
